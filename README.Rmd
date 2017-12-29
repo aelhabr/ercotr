@@ -18,9 +18,11 @@ The goal of this package is to make integrating the ERCOT colors easily with `gg
 
 ## Installation
 
-You can install this package from GitHubs by calling `devtools::install_github("aelhabr/ercotr")`.
+You can install this package from GitHub by calling `devtools::install_github("aelhabr/ercotr")`.
 
 ## Examples
+
+Note that these examples are very similar shown in the `README` file for the `teutils` package.
 
 ```{r }
 library("ggplot2")
@@ -30,7 +32,6 @@ viz_labs <-
     labs(title = "A Title.",
        subtitle = "A subtitle.",
        caption = "A caption.")
-
 
 viz_cars <-
   ggplot(mtcars, aes(x = wt, y = mpg, color = factor(gear))) +
