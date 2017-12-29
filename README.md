@@ -26,8 +26,8 @@ viz_labs <-
 
 viz_cars <-
   ggplot(mtcars, aes(x = wt, y = mpg, color = factor(gear))) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE, size = 2) +
   viz_labs
 
 viz_cars_facet <-
@@ -42,37 +42,36 @@ viz_diamonds <-
 viz_cars + theme_grey()
 ```
 
-![](README-unnamed-chunk-2-1.png)
+![](README_files/README-unnamed-chunk-2-1.png)
 
 ``` r
 viz_cars + scale_color_ercot() + theme_minimal()
 ```
 
-![](README-unnamed-chunk-2-2.png)
+![](README_files/README-unnamed-chunk-2-2.png)
 
 ``` r
 
 viz_cars_facet + theme_grey()
 ```
 
-![](README-unnamed-chunk-2-3.png)
+![](README_files/README-unnamed-chunk-2-3.png)
 
 ``` r
 viz_cars_facet + scale_color_ercot() + theme_minimal()
 ```
 
-![](README-unnamed-chunk-2-4.png)
+![](README_files/README-unnamed-chunk-2-4.png)
 
 ``` r
-
 
 viz_diamonds + scale_fill_ercot() + theme_minimal()
 ```
 
-![](README-unnamed-chunk-2-5.png)
+![](README_files/README-unnamed-chunk-2-5.png)
 
 ``` r
 viz_diamonds + scale_fill_ercot2() + theme_minimal()
 ```
 
-![](README-unnamed-chunk-2-6.png)
+![](README_files/README-unnamed-chunk-2-6.png)
