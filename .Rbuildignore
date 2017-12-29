@@ -2,3 +2,5 @@
 ^\.Rproj\.user$
 ^.*\.yml$
 ^data-raw$
+^README\.Rmd$
+^README-.*\.png$
