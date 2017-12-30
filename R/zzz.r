@@ -12,8 +12,8 @@ print_pkgstartupmsg <- function(msg) {
   # packageStartupMessage(
   msg_1 <-
     paste0(
-    "This package is primarily intended for internal use only,",
-    " though it does not contain any confidential information ",
+    "This package is primarily intended for internal use only",
+    " (although it does not contain any confidential information).",
     " See https://github.com/aelhabr/ercotr for examples."
     )
   packageStartupMessage(
@@ -26,9 +26,7 @@ print_pkgstartupmsg <- function(msg) {
     " These include `ercot_palette` (which is equivalent to `ercot_palette_w_contrast`)",
     " and `ercot_palette2` (which is equivalent to to `ercot_palette_wo_contrast`).",
     " These variables are used in the `scale_color/fill_manual()`",
-    " and `scale_color/fill_manual2()` functions respectively.",
-    " It is not recommended to use the `ercot_pal()` and `ercot_pal2()` functions",
-    " directly. These exist primarily to serve as analogues to the `ggplot2` `manual_pal()` function."
+    " and `scale_color/fill_manual2()` functions respectively."
   )
   packageStartupMessage(
     # paste0(strwrap(msg2, width = 80), sep = "", collapse = "\n")

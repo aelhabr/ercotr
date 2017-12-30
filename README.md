@@ -1,17 +1,34 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 Introduction
 ============
 
-The goal of this package is to make integrating the ERCOT colors easily with `ggplot2` plots.
+This package facilitates the use of the official ERCOT palette with `ggplot2` plots.
 
 Installation
 ------------
 
-You can install this package from GitHubs by calling `devtools::install_github("aelhabr/ercotr")`.
+You can install this package from GitHub by calling `devtools::install_github("aelhabr/ercotr")`.
+
+Notes
+-----
+
+Note the global variables that are loaded into your environment when loading this package. These include:
+
+-   `ercot_palette`
+-   `ercot_palette2`
+-   `ercot_palette_w_contrast` (alias to `ercot_palette`)
+-   `ercot_palette_wo_contrast` (alias to `ercot_palette2`)
+
+These variables are used in the `scale_color/fill_ercot()` and `scale_color/fill_ercot2()` functions respectively.
+
+The `2` variation implement the ordering of the actual official ERCOT palette (i.e. turquoise first, grey second, light green third, etc.) while the un-suffixed counterparts reflect a subjective re-ordering of the same colors that (arguably) improve the contrast in plots. (For example, maroon is the second color instead of grey in the non-suffixed palette because it (arbuably) contrasts better with the first color, turquoise.) Please feel free to use either of these built-in palettes, or to re-order the colors to your liking (e.g. by calling `ercot_palette[c(1, 8, 6)]`, etc.).
+
+In general, it is recommended to only use the `scale_color/fill_ercot()` and `scale_color/fill_ercot2()` functions directly. (Correspodningly, it is not recommended to use other available functions, such as`ercot_pal()` and `ercot_pal2()`, directly. Note that these functions exist primarily to serve as analogues to t he `ggplot2` `manual_pal()` function.)
 
 Examples
 --------
+
+These examples are very similar shown in the `README` file for the `teutils` package.
 
 ``` r
 library("ggplot2")
@@ -22,7 +39,6 @@ viz_labs <-
     labs(title = "A Title.",
        subtitle = "A subtitle.",
        caption = "A caption.")
-
 
 viz_cars <-
   ggplot(mtcars, aes(x = wt, y = mpg, color = factor(gear))) +
