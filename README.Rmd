@@ -55,6 +55,8 @@ These examples are very similar shown in the `README` file for the `teutils` pac
 library("ggplot2")
 library("ercotr")
 
+scales::show_col(ercotr::ercot_pal()(11))
+
 viz_labs <-
     labs(title = "A Title.",
        subtitle = "A subtitle.",

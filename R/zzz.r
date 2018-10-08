@@ -1,9 +1,6 @@
 
-# References:
-# 1. https://github.com/hrbrmstr/hrbrthemes/blob/master/R/zzz.r.
-# 2. https://github.com/metrumresearchgroup/sinew/blob/master/R/zzz.R
 
-print_pkgstartupmsg <- function(msg) {
+.print_pkgstartupmsg <- function(msg) {
   paste0(strwrap(msg, width = 80), sep = "", collapse = "\n")
 }
 
@@ -18,7 +15,7 @@ print_pkgstartupmsg <- function(msg) {
     )
   packageStartupMessage(
     # paste0(strwrap(msg1, width = 80), sep = "", collapse = "\n")
-    print_pkgstartupmsg(msg_1)
+    .print_pkgstartupmsg(msg_1)
   )
   msg_2 <-
     paste0(
@@ -30,7 +27,7 @@ print_pkgstartupmsg <- function(msg) {
   )
   packageStartupMessage(
     # paste0(strwrap(msg2, width = 80), sep = "", collapse = "\n")
-    print_pkgstartupmsg(msg_2)
+    .print_pkgstartupmsg(msg_2)
   )
 
 }
